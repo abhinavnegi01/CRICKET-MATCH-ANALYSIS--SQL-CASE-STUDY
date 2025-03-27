@@ -32,8 +32,11 @@ The following queries were used to extract insights:
 
 # Preview of SQL Queries
 ![Screenshot 2025-03-26 005418](https://github.com/user-attachments/assets/432f19ed-7d3a-4d71-9617-17c79077356d)
+
 ![Screenshot 2025-03-26 012436](https://github.com/user-attachments/assets/6f0360e5-d130-4049-a139-f00e1f417cc1)
+
 ![Screenshot 2025-03-26 015608](https://github.com/user-attachments/assets/6ef77b54-bcae-4214-bbc7-84afc398eeb5)
+
 ![Screenshot 2025-03-26 210248](https://github.com/user-attachments/assets/12005e94-9b7e-420d-bb92-bde8b9d272ec)
 
 # Insights & Findings
