@@ -1,0 +1,42 @@
+QUESTIONS:
+
+1. Identify the player with the best batting average (total runs scored divided by the number of matches played) across all matches.
+2. Find the team with the highest win percentage in matches played across all locations.
+3. Identify the player who contributed the highest percentage of their team's total runs in any single match.
+4. Determine the most consistent player, defined as the one with the smallest standard deviation of runs scored across matches.
+5. Find all matches where the combined total of runs scored, wickets taken, and catches exceeded 500.
+6. Identify the player who has won the most "Player of the Match" awards (highest runs scored or wickets taken in a match).
+7. Determine the team that has the most diverse player roles in their squad.
+8. Identify matches where the runs scored by both teams were unequal and sort them by the smallest difference in total runs between the two teams.
+9. Find players who contributed (batted, bowled, or fielded) in every match that their team participated in.
+10. Identify the match with the closest margin of victory, based on runs scored by both teams.
+11. Calculate the total runs scored by each team across all matches.
+12. List matches where the total wickets taken by the winning team exceeded 2.
+13. Retrieve the top 5 matches with the highest individual scores by any player.
+14. Identify all bowlers who have taken at least 5 wickets across all matches.
+15. Find the total number of catches taken by players from the team that won each match.
+16.  Identify the player with the highest combined impact score in all matches.
+The impact score is calculated as:
+
+Runs scored × 1.5 + Wickets taken × 25 + Catches × 10 + Stumpings × 15 + Run outs × 10.
+Only include players who participated in at least 3 matches.
+17.
+Find the match where the winning team had the narrowest margin of victory based on total runs scored by both teams.
+If multiple matches have the same margin, list all of them.
+18.
+List all players who have outperformed their teammates in terms of total runs scored in more than half the matches they played.
+This requires finding matches where a player scored the most runs among their teammates and calculating the percentage.
+19.
+Rank players by their average impact per match, considering only those who played at least three matches.
+The impact is calculated as:
+
+Runs scored × 1.5 + Wickets taken × 25 + Catches × 10 + Stumpings × 15 + Run outs × 10.
+Players with the same average impact should share the same rank.
+
+20.
+Identify the top 3 matches with the highest cumulative total runs scored by both teams.
+Rank the matches based on total runs using window functions. If multiple matches have the same total runs, they should share the same rank.
+
+21.
+For each player, calculate their running cumulative impact score across all matches they’ve played, ordered by match date.
+Include only players who have played in at least 3 matches.

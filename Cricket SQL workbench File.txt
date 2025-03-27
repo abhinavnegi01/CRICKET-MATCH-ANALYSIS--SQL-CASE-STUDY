@@ -1,0 +1,76 @@
+CREATE TABLE Players (
+    PlayerID INT PRIMARY KEY,
+    PlayerName VARCHAR(100),
+    TeamName VARCHAR(100),
+    Role VARCHAR(50), -- e.g., Batsman, Bowler, All-Rounder, Wicket-Keeper
+    DebutYear INT
+);
+
+INSERT INTO Players VALUES
+(1, 'Virat Kohli', 'India', 'Batsman', 2008),
+(2, 'Steve Smith', 'Australia', 'Batsman', 2010),
+(3, 'Mitchell Starc', 'Australia', 'Bowler', 2010),
+(4, 'MS Dhoni', 'India', 'Wicket-Keeper', 2004),
+(5, 'Ben Stokes', 'England', 'All-Rounder', 2011),
+(6, 'Rashid Khan', 'Afghanistan', 'Bowler', 2015),
+(7, 'David Warner', 'Australia', 'Batsman', 2009),
+(8, 'Jasprit Bumrah', 'India', 'Bowler', 2016),
+(9, 'Joe Root', 'England', 'Batsman', 2012),
+(10, 'Kane Williamson', 'New Zealand', 'Batsman', 2010);
+
+CREATE TABLE Matches (
+    MatchID INT PRIMARY KEY,
+    MatchDate DATE,
+    Location VARCHAR(100),
+    Team1 VARCHAR(100),
+    Team2 VARCHAR(100),
+    Winner VARCHAR(100)
+);
+
+INSERT INTO Matches VALUES
+(1, '2023-03-01', 'Mumbai', 'India', 'Australia', 'India'),
+(2, '2023-03-05', 'Sydney', 'Australia', 'England', 'England'),
+(3, '2023-04-10', 'London', 'England', 'India', 'India'),
+(4, '2023-05-15', 'Dubai', 'India', 'Afghanistan', 'India'),
+(5, '2023-06-20', 'Melbourne', 'Australia', 'New Zealand', 'Australia');
+
+CREATE TABLE Performance (
+    MatchID INT,
+    PlayerID INT,
+    RunsScored INT,
+    WicketsTaken INT,
+    Catches INT,
+    Stumpings INT,
+    NotOut BOOLEAN,
+    RunOuts INT,
+    FOREIGN KEY (MatchID) REFERENCES Matches(MatchID),
+    FOREIGN KEY (PlayerID) REFERENCES Players(PlayerID)
+);
+
+INSERT INTO Performance VALUES
+(1, 1, 82, 0, 1, 0, FALSE, 0),
+(1, 4, 5, 0, 0, 1, TRUE, 0),
+(1, 8, 10, 3, 0, 0, FALSE, 1),
+(2, 9, 120, 0, 2, 0, TRUE, 0),
+(2, 3, 15, 4, 0, 0, FALSE, 0),
+(3, 1, 45, 0, 1, 0, FALSE, 0),
+(3, 4, 22, 0, 0, 2, TRUE, 0),
+(3, 10, 85, 0, 0, 0, FALSE, 1),
+(4, 6, 35, 5, 0, 0, FALSE, 0),
+(4, 1, 90, 0, 1, 0, FALSE, 0),
+(5, 7, 75, 0, 0, 0, TRUE, 0),
+(5, 3, 18, 3, 1, 0, FALSE, 0);
+
+
+CREATE TABLE Teams (
+    TeamName VARCHAR(100) PRIMARY KEY,
+    Coach VARCHAR(100),
+    Captain VARCHAR(100)
+);
+
+INSERT INTO Teams VALUES
+('India', 'Rahul Dravid', 'Rohit Sharma'),
+('Australia', 'Andrew McDonald', 'Pat Cummins'),
+('England', 'Brendon McCullum', 'Ben Stokes'),
+('Afghanistan', 'Jonathan Trott', 'Hashmatullah Shahidi'),
+('New Zealand', 'Gary Stead', 'Kane Williamson');
